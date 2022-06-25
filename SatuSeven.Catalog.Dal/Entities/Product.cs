@@ -1,6 +1,7 @@
+using SatuSeven.Contracts.Abstract;
+
 namespace SatuSeven.Catalog.Dal.Entities;
 
-public class Product
+public class Product : Entity
 {
-    
 }

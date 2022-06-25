@@ -2,5 +2,4 @@ namespace SatuSeven.Contracts.Abstract.Providers.EntityFramework.Tests.Infrastru
 
 public class CertainEntity : Entity
 {
-    
 }

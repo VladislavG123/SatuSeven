@@ -139,7 +139,7 @@ public class EntityFrameworkProviderUnitTests
         Assert.NotNull(data);
         Assert.Equal(data!.Id, entities.First().Id);
     }
-    
+
     [Fact]
     public async void MultipleCreationAndFirstOrDefault_DefaultExpected()
     {
@@ -163,7 +163,7 @@ public class EntityFrameworkProviderUnitTests
         var context = new TestApplicationContext();
         var provider = new CertainEntityFrameworkProvider(context);
         var entities = new CertainEntity[] {new(), new(), new(), new()};
-        
+
         // Act
         await provider.AddRange(entities);
         var entity = await provider.GetById(entities.First().Id);
@@ -172,12 +172,12 @@ public class EntityFrameworkProviderUnitTests
         await provider.Edit(entity);
 
         entity = await provider.GetById(entity.Id);
-        
+
         // Assert
         Assert.NotNull(entity);
         Assert.Equal(DateTime.MinValue, entity!.CreationDate);
     }
-    
+
     [Fact]
     public async void DeleteAndFindById_NullExpected()
     {
@@ -185,15 +185,15 @@ public class EntityFrameworkProviderUnitTests
         var context = new TestApplicationContext();
         var provider = new CertainEntityFrameworkProvider(context);
         var entities = new CertainEntity[] {new(), new(), new(), new()};
-        
+
         // Act
         await provider.AddRange(entities);
         var entity = await provider.GetById(entities.First().Id);
 
         await provider.Remove(entity!);
-        
+
         entity = await provider.GetById(entity!.Id);
-        
+
         // Assert
         Assert.Null(entity);
     }

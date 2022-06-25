@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\SatuSeven.Contracts\SatuSeven.Contracts.csproj" />
+    </ItemGroup>
+
 </Project>

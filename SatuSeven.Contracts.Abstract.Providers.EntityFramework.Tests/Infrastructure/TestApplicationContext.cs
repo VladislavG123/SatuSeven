@@ -5,8 +5,8 @@ namespace SatuSeven.Contracts.Abstract.Providers.EntityFramework.Tests.Infrastru
 public class TestApplicationContext : DbContext
 {
     public TestApplicationContext()
-    : base(new DbContextOptionsBuilder<TestApplicationContext>()
-        .UseInMemoryDatabase("SatuSeven.Contracts.Abstract.Providers.EntityFramework.Tests").Options)
+        : base(new DbContextOptionsBuilder<TestApplicationContext>()
+            .UseInMemoryDatabase("SatuSeven.Contracts.Abstract.Providers.EntityFramework.Tests").Options)
     {
         Database.EnsureDeleted();
     }
