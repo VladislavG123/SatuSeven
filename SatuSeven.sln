@@ -28,6 +28,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D224FB51
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SatuSeven.Contracts.Abstract.Providers.EntityFramework.Tests", "SatuSeven.Contracts.Abstract.Providers.EntityFramework.Tests\SatuSeven.Contracts.Abstract.Providers.EntityFramework.Tests.csproj", "{48B23781-E6E7-4BFA-B4EB-285B418E7CF7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{6AAD6612-3BF8-4D23-952B-31B84CC89D45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SatuSeven.Gateways.ClientManagementSystem", "SatuSeven.Gateways.ClientManagementSystem\SatuSeven.Gateways.ClientManagementSystem.csproj", "{00504C99-6B2D-428A-BE03-5FFD6CE66879}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A661E71D-A23F-4768-AAA7-5752BF5C71C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SatuSeven.Gateways.ClientManagementSystem.Tests", "SatuSeven.Gateways.ClientManagementSystem.Tests\SatuSeven.Gateways.ClientManagementSystem.Tests.csproj", "{830B4529-5539-4E4D-B224-4F0C4BF3C42E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +53,9 @@ Global
 		{710DE3C1-1820-49EC-B856-37DC2BA97B8C} = {DDA9919F-AFE6-43A1-BC72-CD50B6482047}
 		{D224FB51-ABEF-4F12-8FF7-C2C3D6DB2ED7} = {DDA9919F-AFE6-43A1-BC72-CD50B6482047}
 		{48B23781-E6E7-4BFA-B4EB-285B418E7CF7} = {D224FB51-ABEF-4F12-8FF7-C2C3D6DB2ED7}
+		{00504C99-6B2D-428A-BE03-5FFD6CE66879} = {6AAD6612-3BF8-4D23-952B-31B84CC89D45}
+		{A661E71D-A23F-4768-AAA7-5752BF5C71C6} = {6AAD6612-3BF8-4D23-952B-31B84CC89D45}
+		{830B4529-5539-4E4D-B224-4F0C4BF3C42E} = {A661E71D-A23F-4768-AAA7-5752BF5C71C6}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B1699265-7C45-4BE7-BF07-DA6DE20D0506}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -83,5 +94,13 @@ Global
 		{48B23781-E6E7-4BFA-B4EB-285B418E7CF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48B23781-E6E7-4BFA-B4EB-285B418E7CF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48B23781-E6E7-4BFA-B4EB-285B418E7CF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00504C99-6B2D-428A-BE03-5FFD6CE66879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00504C99-6B2D-428A-BE03-5FFD6CE66879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00504C99-6B2D-428A-BE03-5FFD6CE66879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00504C99-6B2D-428A-BE03-5FFD6CE66879}.Release|Any CPU.Build.0 = Release|Any CPU
+		{830B4529-5539-4E4D-B224-4F0C4BF3C42E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{830B4529-5539-4E4D-B224-4F0C4BF3C42E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{830B4529-5539-4E4D-B224-4F0C4BF3C42E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{830B4529-5539-4E4D-B224-4F0C4BF3C42E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
