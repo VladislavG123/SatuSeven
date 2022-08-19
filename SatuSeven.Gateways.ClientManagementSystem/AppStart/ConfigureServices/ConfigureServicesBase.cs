@@ -14,10 +14,12 @@ public class ConfigureServicesBase
     {
         services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         services.AddMediatR(typeof(Program));
+        
         services.AddControllers().AddFluentValidation(s => 
         { 
             s.RegisterValidatorsFromAssemblyContaining<Program>(); 
-        });;
+        });
+        
         services.AddMemoryCache();
         services.AddRouting();
         services.AddHttpContextAccessor();

@@ -17,7 +17,7 @@ public class CreateRequestToMakeCompanyParameterValidator : AbstractValidator<Cr
             .MinimumLength(1)
             .MaximumLength(500);
         
-        RuleFor(p => p.ImageUrl)
+        RuleFor(p => p.LogoUrl)
             .NotEmpty()
             .Must(LinkMustBeAUri)
             .WithMessage("Link '{PropertyValue}' must be a valid URI. eg: http://www.SomeWebSite.com.au");

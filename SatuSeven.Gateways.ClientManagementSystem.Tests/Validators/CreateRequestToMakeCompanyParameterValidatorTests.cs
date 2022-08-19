@@ -56,8 +56,8 @@ public class CreateRequestToMakeCompanyParameterValidatorTests
     {
         _validator.TestValidate(new CreateRequestToMakeCompanyParameter
         {
-            ImageUrl = url
-        }).ShouldHaveValidationErrorFor(x => x.ImageUrl);
+            LogoUrl = url
+        }).ShouldHaveValidationErrorFor(x => x.LogoUrl);
     }
     
     [Theory]

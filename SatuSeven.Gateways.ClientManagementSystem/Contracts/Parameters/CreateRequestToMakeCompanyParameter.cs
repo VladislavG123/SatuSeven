@@ -6,6 +6,6 @@ public class CreateRequestToMakeCompanyParameter
 {
     public string? Name { get; set; }
     public string? Details { get; set; }
-    public string? ImageUrl { get; set; }
+    public string? LogoUrl { get; set; }
     public string? Slug { get; set; }
 }

@@ -1,29 +1,28 @@
 using Microsoft.OpenApi.Models;
+using SatuSeven.Gateways.ClientManagementSystem.Contracts.Options;
 using Swashbuckle.AspNetCore.SwaggerUI;
 
 namespace SatuSeven.Gateways.ClientManagementSystem.AppStart.ConfigureServices;
 
 public class ConfigureServicesSwagger
 {
-    private const string AppTitle = "SatuSeven API";
-    private const string AppDescription = "Web API for SatuSeven";
-    private static readonly string AppVersion = $"q.0.0";
-    private const string SwaggerConfig = "/swagger/v1/swagger.json";
-    private const string SwaggerUrl = "api/manual";
+    private static SwaggerOptions _swaggerOptions;
 
     /// <summary>
     /// ConfigureServices Swagger services
     /// </summary>
     /// <param name="services"></param>
-    public static void ConfigureServices(IServiceCollection services)
+    public static void ConfigureServices(IServiceCollection services, SwaggerOptions swaggerOptions)
     {
+        _swaggerOptions = swaggerOptions;
+        
         services.AddSwaggerGen(options =>
         {
             options.SwaggerDoc("v1", new OpenApiInfo
             {
-                Title = AppTitle,
-                Version = AppVersion,
-                Description = AppDescription
+                Title = _swaggerOptions.AppTitle,
+                Version = _swaggerOptions.AppVersion,
+                Description = _swaggerOptions.AppDescription
             });
 
             options.ResolveConflictingActions(x => x.First());
@@ -36,15 +35,16 @@ public class ConfigureServicesSwagger
     /// <param name="settings"></param>
     public static void SwaggerSettings(SwaggerUIOptions settings)
     {
-        settings.SwaggerEndpoint(SwaggerConfig, $"{AppTitle} v.{AppVersion}");
-        settings.RoutePrefix = SwaggerUrl;
+        settings.SwaggerEndpoint(_swaggerOptions.Config, 
+            $"{_swaggerOptions.AppTitle} v.{_swaggerOptions.AppVersion}");
+        settings.RoutePrefix = _swaggerOptions.Url;
         settings.HeadContent = $"";
-        settings.DocumentTitle = $"{AppTitle}";
+        settings.DocumentTitle = $"{_swaggerOptions.AppTitle}";
         settings.DefaultModelExpandDepth(0);
         settings.DefaultModelRendering(ModelRendering.Model);
         settings.DefaultModelsExpandDepth(0);
         settings.DocExpansion(DocExpansion.None);
         settings.DisplayRequestDuration();
-        settings.OAuthAppName(AppTitle);
+        settings.OAuthAppName(_swaggerOptions.AppTitle);
     }
 }

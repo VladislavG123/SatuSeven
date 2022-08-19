@@ -10,14 +10,24 @@
     <ItemGroup>
         <PackageReference Include="AutoMapper" Version="11.0.1" />
         <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
-        <PackageReference Include="FluentValidation.AspNetCore" Version="11.1.1" />
+        <PackageReference Include="FluentValidation.AspNetCore" Version="8.6.3" />
         <PackageReference Include="FluentValidation.WebAPI" Version="8.6.1" />
         <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.8" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.8" />
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite" Version="6.0.6" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     </ItemGroup>
 
     <ItemGroup>
       <Folder Include="Contracts\Responses" />
+      <Folder Include="MediatR\NotificationHandlers" />
+      <Folder Include="MediatR\RequestHandlers" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SatuSeven.Gateways.ClientManagementSystem.Bll\SatuSeven.Gateways.ClientManagementSystem.Bll.csproj" />
     </ItemGroup>
 
 </Project>
